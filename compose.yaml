@@ -1,0 +1,11 @@
+services:
+  postgresql:
+    container_name: postgresql-16
+    image: postgres:16-alpine
+    restart: always
+    environment:
+      POSTGRES_DB: control
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - 5432:5432
